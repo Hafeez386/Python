@@ -1,3 +1,3 @@
-# firstproj
-this is my first program on github
+100 Days of python
+
 
