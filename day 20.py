@@ -10,6 +10,7 @@ DOWN = 270
 LEFT = 180
 RIGHT = 0
 
+
 # Snake class
 class Snake:
     def __init__(self):
@@ -54,6 +55,7 @@ class Snake:
         if self.head.heading() != LEFT:
             self.head.setheading(RIGHT)
 
+
 # Food class
 class Food(Turtle):
     def __init__(self):
@@ -69,6 +71,7 @@ class Food(Turtle):
         random_x = random.randint(-280, 280)
         random_y = random.randint(-280, 280)
         self.goto(random_x, random_y)
+
 
 # Scoreboard class
 class Scoreboard(Turtle):
@@ -92,6 +95,7 @@ class Scoreboard(Turtle):
     def increase_score(self):
         self.score += 1
         self.update_scoreboard()
+
 
 # Main game setup
 screen = Screen()
@@ -124,10 +128,10 @@ while is_game_on:
 
     # Detect collision with wall
     if (
-        snake.head.xcor() > 280
-        or snake.head.xcor() < -280
-        or snake.head.ycor() > 280
-        or snake.head.ycor() < -280
+            snake.head.xcor() > 280
+            or snake.head.xcor() < -280
+            or snake.head.ycor() > 280
+            or snake.head.ycor() < -280
     ):
         is_game_on = False
         scoreboard.game_over()
